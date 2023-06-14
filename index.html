@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>cruds3</title>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo" id="log">product management system</a>
+        <nav class="navigation">
+            <a id="create" onclick="Create ()">Create</a>
+            <a id="clients" onclick="Clients ()">clients</a>
+           
+        </nav>
+    </header>
+
+    <div class="container1" id="container1">
+
+       <div id="ifcreer"></div>
+        <div class="inputs">
+            <input type="text" placeholder="name" id="namee">
+            <input type="text" placeholder="products" id="products">
+            <input type="number" placeholder="price" id="price">
+            <input type="number" placeholder="count" id="count">
+            <input type="date" id="date">
+            <input type="time" id="time">
+            <button id="creer" onclick="CreerData ()">Create</button>
+        </div>
+
+
+    </div>
+
+    <div class="container2" id="container2">
+
+            
+        <div class="totale">
+            <button id="totale">Totale : 0 euro</button>
+        </div>
+
+        <div class="search">
+            <input onkeyup="SearchData (value.toLowerCase())" type="text" id="search" placeholder="Search By Name">
+        </div>
+
+      <div class = 'deleteAll'>
+        <button id="deleteAll" onclick="ConfirmDelete(this.id)"></button>
+        <button id ='deleteF'>Are you sure ?
+            <strong onclick="Delete (this.id)" id = 'yes' >Yes</strong>
+            <strong onclick="Delete (this.id)" id = 'non'>No</strong>
+         </button>
+      </div >
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRODUCTS</th>
+                <th>PRICE</th>
+                <th>COUNT</th>
+                <th>TOTALE</th>
+                <th>DATE</th>
+                <th>TIME</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+            <tbody id="Tbody">
+                
+            </tbody>
+        </table>
+
+    </div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
